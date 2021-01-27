@@ -1,7 +1,7 @@
 import {
   __commonJS,
   require_preact_module
-} from "./chunk.MVS7IV5O.js";
+} from "./chunk.ZRDR2ZSN.js";
 
 // cjs-call.js
 var require_cjs_call = __commonJS((exports, module) => {

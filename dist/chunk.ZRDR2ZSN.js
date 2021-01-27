@@ -235,34 +235,34 @@ var require_preact_module = __commonJS((exports) => {
     });
   }
   function z(n2, l2, u2, i2, t2, r2, e2, c2) {
-    var a2, v2, h2, y2, p2, d2 = u2.props, _2 = l2.props, k2 = l2.type;
-    if (k2 === "svg" && (t2 = true), r2 != null) {
-      for (a2 = 0; a2 < r2.length; a2++)
-        if ((v2 = r2[a2]) != null && (n2 == v2 || v2.localName == k2)) {
-          n2 = v2, r2[a2] = null;
+    var a2, v2, h2, y2, p2 = u2.props, d2 = l2.props, _2 = l2.type, k2 = 0;
+    if (_2 === "svg" && (t2 = true), r2 != null) {
+      for (; k2 < r2.length; k2++)
+        if ((a2 = r2[k2]) && (a2 === n2 || (_2 ? a2.localName == _2 : a2.nodeType == 3))) {
+          n2 = a2, r2[k2] = null;
           break;
         }
     }
     if (n2 == null) {
-      if (k2 === null)
-        return document.createTextNode(_2);
-      n2 = t2 ? document.createElementNS("http://www.w3.org/2000/svg", k2) : document.createElement(k2, _2.is && _2), r2 = null, c2 = false;
+      if (_2 === null)
+        return document.createTextNode(d2);
+      n2 = t2 ? document.createElementNS("http://www.w3.org/2000/svg", _2) : document.createElement(_2, d2.is && d2), r2 = null, c2 = false;
     }
-    if (k2 === null)
-      d2 === _2 || c2 && n2.data === _2 || (n2.data = _2);
+    if (_2 === null)
+      p2 === d2 || c2 && n2.data === d2 || (n2.data = d2);
     else {
-      if (r2 != null && (r2 = f.slice.call(n2.childNodes)), h2 = (d2 = u2.props || o).dangerouslySetInnerHTML, y2 = _2.dangerouslySetInnerHTML, !c2) {
+      if (r2 = r2 && f.slice.call(n2.childNodes), v2 = (p2 = u2.props || o).dangerouslySetInnerHTML, h2 = d2.dangerouslySetInnerHTML, !c2) {
         if (r2 != null)
-          for (d2 = {}, p2 = 0; p2 < n2.attributes.length; p2++)
-            d2[n2.attributes[p2].name] = n2.attributes[p2].value;
-        (y2 || h2) && (y2 && (h2 && y2.__html == h2.__html || y2.__html === n2.innerHTML) || (n2.innerHTML = y2 && y2.__html || ""));
+          for (p2 = {}, y2 = 0; y2 < n2.attributes.length; y2++)
+            p2[n2.attributes[y2].name] = n2.attributes[y2].value;
+        (h2 || v2) && (h2 && (v2 && h2.__html == v2.__html || h2.__html === n2.innerHTML) || (n2.innerHTML = h2 && h2.__html || ""));
       }
-      if (A(n2, _2, d2, t2, c2), y2)
+      if (A(n2, d2, p2, t2, c2), h2)
         l2.__k = [];
-      else if (a2 = l2.props.children, b(n2, Array.isArray(a2) ? a2 : [a2], l2, u2, i2, t2 && k2 !== "foreignObject", r2, e2, n2.firstChild, c2), r2 != null)
-        for (a2 = r2.length; a2--; )
-          r2[a2] != null && s(r2[a2]);
-      c2 || ("value" in _2 && (a2 = _2.value) !== void 0 && (a2 !== n2.value || k2 === "progress" && !a2) && C(n2, "value", a2, d2.value, false), "checked" in _2 && (a2 = _2.checked) !== void 0 && a2 !== n2.checked && C(n2, "checked", a2, d2.checked, false));
+      else if (k2 = l2.props.children, b(n2, Array.isArray(k2) ? k2 : [k2], l2, u2, i2, t2 && _2 !== "foreignObject", r2, e2, n2.firstChild, c2), r2 != null)
+        for (k2 = r2.length; k2--; )
+          r2[k2] != null && s(r2[k2]);
+      c2 || ("value" in d2 && (k2 = d2.value) !== void 0 && (k2 !== n2.value || _2 === "progress" && !k2) && C(n2, "value", k2, p2.value, false), "checked" in d2 && (k2 = d2.checked) !== void 0 && k2 !== n2.checked && C(n2, "checked", k2, p2.checked, false));
     }
     return n2;
   }
